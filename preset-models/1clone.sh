@@ -1,6 +1,6 @@
 #!/bin/sh
 # 下载源码
-git clone https://github.com/coolsnowwolf/lede.git
+git clone https://github.com/idxxy6/lede
 mv ./lede/* ./
 
 # 下载自定义插件
