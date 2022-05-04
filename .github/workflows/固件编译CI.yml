@@ -19,10 +19,10 @@ on:
       model:
         description: '选择机型'
         required: true
-        default: 'h3c_tx1801-plus' 
+        default: 'xiaomi-4a-gigabit' 
         type: choice
         options:
-        - h3c_tx1801-plus
+        - mi-router-4a-gigabit
         - mi-router-3g-v2
         - mi-router-ac2100
         - redmi-router-ac2100
