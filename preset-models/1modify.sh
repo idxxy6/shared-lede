@@ -9,12 +9,12 @@ sed -i 's/Xiaomi Mi Router 3G v2/Xiaomi 3G v2/g' target/linux/ramips/dts/mt7621_
 #修改固件大小、复制闪存布局文件
 sed -i '/Device\/h3c_tx1801-plus/,/h3c_tx1801-plus/ s/4096k/128512k/' target/linux/ramips/image/mt7621.mk
 sed -i '/Device\/xiaomi_mi-router-3g-v2/,/mir3g-v2/ s/14848k/16064k/' target/linux/ramips/image/mt7621.mk
-\cp -rf extra-files/mt7621_h3c_tx1801-plus.dts target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-3g-v2.dtsi
+\cp -rf extra-files/mt7621_h3c_tx1801-plus.dts target/linux/ramips/dts/mt7621_h3c_tx1801-plus.dts
 #复制uci-defaults脚本 
 mkdir -p files/etc/uci-defaults
 cp -f uci-scripts/* files/etc/uci-defaults
 #切换ramips内核到5.10
-sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.10' target/linux/ramips/Makefile
+#sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.10' target/linux/ramips/Makefile
 #复制内核5.10版本CPU超频补丁
 #\cp -rf extra-files/322-mt7621-fix-cpu-clk-add-clkdev.patch target/linux/ramips/patches-5.10/322-mt7621-fix-cpu-clk-add-clkdev.patch
 #设置WIFI
